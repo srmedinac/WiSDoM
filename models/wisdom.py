@@ -10,7 +10,6 @@ from .encoders.convnext_encoder import create_convnext_encoder, PatchEncoder
 
 
 class Patches(tf.keras.layers.Layer):
-    """Extract patches from whole slide images"""
     
     def __init__(self, patch_size, image_size, strides):
         super(Patches, self).__init__()
