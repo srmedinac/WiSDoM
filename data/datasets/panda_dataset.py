@@ -28,14 +28,6 @@ def load_panda_metadata(data_dir):
     test_dict = {k: v for k, v in test_dict.items() 
                  if os.path.isfile(os.path.join(mosaic_dir, k+'.jpeg'))}
     
-    # Remove problematic samples
-    problematic_ids = ['1c36b3db47d83f1436bd260288c5723f',
-                      '50203fbd5de280144cbb16749814a3fe',
-                      'ecae863e7c478594aa4c84ce132b3825']
-    for pid in problematic_ids:
-        train_dict.pop(pid, None)
-        test_dict.pop(pid, None)
-    
     return train_dict, val_dict, test_dict
 
 
